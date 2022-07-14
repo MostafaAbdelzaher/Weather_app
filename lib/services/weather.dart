@@ -69,9 +69,9 @@ class WeatherModel {
   }
 
   String getImage(int temp) {
-    if (temp > 20) {
+    if (temp >= 28) {
       return "images/2.png";
-    } else if (temp < 10) {
+    } else if (temp <= 15) {
       return "images/3.png";
     } else {
       return "images/1.png";

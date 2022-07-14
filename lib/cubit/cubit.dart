@@ -32,8 +32,9 @@ class WeatherCubit extends Cubit<WeatherStates> {
 
   upDateId(weatherData) {
     weatherDataModel = WeatherDataModel(
-        weatherTitle: WeatherModel().getTitle(weatherData["weather"][0]["id"]),
-        image: WeatherModel().getImage(weatherData["main"]["temp"].toInt()!),
+        weatherTitle:
+            WeatherModel().getTitle(weatherData["main"]["temp"].toInt()),
+        image: WeatherModel().getImage(weatherData["main"]["temp"].toInt()),
         cityName: weatherData["name"],
         temperature: weatherData["main"]["temp"].toInt(),
         weatherIcon:
